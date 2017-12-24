@@ -1,5 +1,4 @@
 export default `
-  type Query { nodes: [Node] }
   type Node {
     ID: String!,
     Version: NodeVersion,
