@@ -7,8 +7,11 @@ const fixLabels = node => {
   return node;
 };
 
+const getDockerAttr = attr => docker[attr]().then(item => item.map(fixLabels));
+
 export default {
   Query: {
-    nodes: () => docker.listNodes().then(nodes => nodes.map(fixLabels)),
+    nodes: () => getDockerAttr('listNodes'),
+    services: () => getDockerAttr('listServices'),
   },
 };
