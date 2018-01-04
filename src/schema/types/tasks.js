@@ -1,3 +1,5 @@
+import sharedTypes from './shared';
+
 export default `
   type Task {
     ID: String!

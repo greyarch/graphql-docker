@@ -1,17 +1,11 @@
-// # type ServiceDNSConfig { _: String }
-// # type ServiceResourceLimits { _: String }
-// # type ServiceResourceReservations { _: String }
+import sharedTypes from './shared';
 
 export default `
   type Service {
-    ID: String!,
-    Version: ServiceVersion,
-    CreatedAt: DateTime,
-    UpdatedAt: DateTime,
+    ${sharedTypes}
     Spec: ServiceSpec
     Endpoint: ServiceEndpoint
   }
-  type ServiceVersion { Index: Int! }
   type ServiceSpec {
     Name: String,
     Labels: JSON

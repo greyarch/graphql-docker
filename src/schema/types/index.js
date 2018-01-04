@@ -7,6 +7,7 @@ import tasks from './tasks';
 const common = `
   scalar JSON
   scalar DateTime
+  type Version { Index: Int! }
 `;
 
 const query = `

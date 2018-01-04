@@ -1,9 +1,8 @@
+import sharedTypes from './shared';
+
 export default `
   type Node {
-    ID: String!,
-    Version: NodeVersion
-    CreatedAt: DateTime
-    UpdatedAt: DateTime
+    ${sharedTypes}
     Spec: NodeSpec
     Description: NodeDescription
     Status: NodeStatus
