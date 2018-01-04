@@ -2,15 +2,15 @@ export default `
   type Node {
     ID: String!,
     Version: NodeVersion,
-    CreatedAt: String,
-    UpdatedAt: String,
+    CreatedAt: DateTime,
+    UpdatedAt: DateTime,
     Spec: NodeSpec,
     Description: NodeDescription,
     Status: NodeStatus,
     ManagerStatus: NodeManagerStatus
   }
   type NodeVersion { Index: Int! }
-  type NodeSpec { Labels: [String], Role: String, Availability: String }
+  type NodeSpec { Labels: JSON, Role: String, Availability: String }
   type NodeStatus { State: String, Addr: String }
   type NodeDescription {
     Hostname: String,

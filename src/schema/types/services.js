@@ -1,16 +1,20 @@
+// # type ServiceDNSConfig { _: String }
+// # type ServiceResourceLimits { _: String }
+// # type ServiceResourceReservations { _: String }
+
 export default `
   type Service {
     ID: String!,
     Version: ServiceVersion,
-    CreatedAt: String,
-    UpdatedAt: String,
+    CreatedAt: DateTime,
+    UpdatedAt: DateTime,
     Spec: ServiceSpec
     Endpoint: ServiceEndpoint
   }
   type ServiceVersion { Index: Int! }
   type ServiceSpec {
     Name: String,
-    Labels: [String]
+    Labels: JSON
     TaskTemplate: ServiceTaskTemplate
     Mode: ServiceMode
     EndpointSpec: ServiceEndpointSpec
@@ -25,16 +29,13 @@ export default `
   type ServiceContainerSpec {
     Image: String,
     Args: [String],
-    DNSConfig: ServiceDNSConfig,
+    DNSConfig: JSON,
     Isolation: String
   }
-  type ServiceDNSConfig { _: String }
   type ServiceResources {
-    Limits: ServiceResourceLimits,
-    Reservations: ServiceResourceReservations
+    Limits: JSON,
+    Reservations: JSON
   }
-  type ServiceResourceLimits { _: String }
-  type ServiceResourceReservations { _: String }
   type ServicePlacement {
     Platforms: [ ServicePlacementPlatform ]
   }
@@ -42,7 +43,5 @@ export default `
   type ServiceMode { Replicated: ServiceModeReplicated }
   type ServiceModeReplicated { Replicas: Int }
   type ServiceEndpointSpec { Mode: String }
-  type ServiceEndpoint { Spec: Empty }
-
-  type Empty { _: String }
+  type ServiceEndpoint { Spec: JSON }
 `;
