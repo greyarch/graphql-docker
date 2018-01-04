@@ -8,5 +8,6 @@ export default {
   Query: {
     nodes: () => docker.listNodes(),
     services: () => docker.listServices(),
+    tasks: () => docker.listTasks(),
   },
 };

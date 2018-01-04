@@ -1,12 +1,12 @@
 export default `
   type Node {
     ID: String!,
-    Version: NodeVersion,
-    CreatedAt: DateTime,
-    UpdatedAt: DateTime,
-    Spec: NodeSpec,
-    Description: NodeDescription,
-    Status: NodeStatus,
+    Version: NodeVersion
+    CreatedAt: DateTime
+    UpdatedAt: DateTime
+    Spec: NodeSpec
+    Description: NodeDescription
+    Status: NodeStatus
     ManagerStatus: NodeManagerStatus
   }
   type NodeVersion { Index: Int! }
