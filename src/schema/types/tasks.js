@@ -1,11 +1,8 @@
-import sharedTypes from './shared';
+import shared from './shared';
 
 export default `
   type Task {
-    ID: String!
-    Version: JSON
-    CreatedAt: DateTime
-    UpdatedAt: DateTime
+    ${shared}
     Labels: JSON
     Spec: JSON
     ServiceID: String

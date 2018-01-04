@@ -1,8 +1,8 @@
-import sharedTypes from './shared';
+import shared from './shared';
 
 export default `
   type Service {
-    ${sharedTypes}
+    ${shared}
     Spec: ServiceSpec
     Endpoint: ServiceEndpoint
   }

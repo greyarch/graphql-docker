@@ -1,8 +1,8 @@
-import sharedTypes from './shared';
+import shared from './shared';
 
 export default `
   type Node {
-    ${sharedTypes}
+    ${shared}
     Spec: NodeSpec
     Description: NodeDescription
     Status: NodeStatus
