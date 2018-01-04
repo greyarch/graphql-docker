@@ -7,7 +7,7 @@
     "build": "babel src -d lib",
     "watch": "babel -w src -d lib",
     "start": "micro",
-    "dev": "DOCKER_HOST=http://10.25.96.21:2375 micro-dev"
+    "dev": "micro-dev"
   },
   "keywords": [],
   "author": "Gantcho Kojuharov <gantcho@greyarch.net> (http://greyarch.net)",
